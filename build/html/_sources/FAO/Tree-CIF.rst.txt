@@ -1,8 +1,0 @@
-CIF
-===
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Contents:
-
-   CIF

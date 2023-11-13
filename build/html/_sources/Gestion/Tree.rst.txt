@@ -1,7 +1,0 @@
-Gestion
-=======
-
-.. toctree::
-   :maxdepth: 2
-
-   Tree-Partenariat_et_Subvention
