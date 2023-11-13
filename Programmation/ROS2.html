@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.2.1. Introduction &mdash; Documentation Doc Outil Crubs 1.0.0</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="2.3. Arduino" href="Tree-Arduino.html" />
+    <link rel="prev" title="2.2. ROS2" href="Tree-ROS2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Doc Outil Crubs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Gestion/Tree.html">1. Gestion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gestion/Tree-Partenariat_et_Subvention.html">1.1. Partenariat et Subvention</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Gestion/Partenariat_et_Subvention.html">1.1.1. Partenariat et Subvention</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Gestion/Partenariat_et_Subvention.html#dossier">1.1.1.1. Dossier</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Gestion/Partenariat_et_Subvention.html#ecole-bde">1.1.2. Ecole / BDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Gestion/Partenariat_et_Subvention.html#fsdie">1.1.3. FSDIE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Gestion/Partenariat_et_Subvention.html#id1">1.1.3.1. 2022-2023</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Gestion/Partenariat_et_Subvention.html#coriolis-composites">1.1.4. Coriolis Composites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Gestion/Partenariat_et_Subvention.html#id2">1.1.4.1. 2022-2023</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Gestion/Partenariat_et_Subvention.html#id3">1.1.4.2. 2023-2024</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Gestion/Partenariat_et_Subvention.html#igus">1.1.5. IGUS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Gestion/Partenariat_et_Subvention.html#id4">1.1.5.1. 2023-2024</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="Tree.html">2. Programmation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Tree-ROS_Arduino.html">2.1. ROS-Arduino</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ROS_Arduino.html">2.1.1. Installation et Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ROS_Arduino.html#lancement-d-une-liaison-serie-ros-arduino">2.1.2. Lancement d’une liaison serie ROS - Arduino</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="Tree-ROS2.html">2.2. ROS2</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-et-setup">2.2.2. Installation et Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bien-commencer">2.2.3. Bien commencer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creation-d-un-workspace">2.2.3.1. Creation d’un workspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creation-d-un-package">2.2.3.2. Création d’un package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#programmes-type">2.2.3.3. Programmes type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#build-d-un-workspace-avec-colcon">2.2.3.4. Build d’un workspace avec colcon</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#commandes-importantes">2.2.4. Commandes importantes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#les-executable">2.2.4.1. Les executable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#les-launchs">2.2.4.2. Les launchs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#les-topics">2.2.4.3. les topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#les-noeuds">2.2.4.4. les noeuds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rqt-graph">2.2.4.5. rqt graph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rviz">2.2.4.6. rviz</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Arduino.html">2.3. Arduino</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Arduino.html">2.3.1. Arduino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Arduino.html#liaison-serie">2.3.2. Liaison serie</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Arduino.html#cote-arduino">2.3.2.1. Cote arduino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Arduino.html#cote-python">2.3.2.2. Cote python</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Arduino.html#les-interuptions">2.3.3. Les interuptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Arduino.html#interruptions-sur-un-pin">2.3.3.1. interruptions sur un pin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Arduino.html#interruptions-sur-timer">2.3.3.2. interruptions sur timer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Robot-2023/Tree.html">3. Robots Coupe de France de Robotique 2023</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Robot-2023/Tree-Introduction.html">3.1. Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Introduction.html">3.1.1. Sujet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Introduction.html#choix">3.1.2. Choix</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Introduction.html#generalites">3.1.2.1. Généralités</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Introduction.html#prehenseurs">3.1.2.2. Préhenseurs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Introduction.html#alimentation">3.1.2.3. Alimentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Introduction.html#motorisation">3.1.2.4. Motorisation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Introduction.html#detection-d-obstacle">3.1.2.5. Détection d’obstacle</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Introduction.html#robot-n1-pi">3.1.3. Robot n°1 PI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Introduction.html#objectifs">3.1.3.1. Objectifs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Introduction.html#architecture">3.1.3.2. Architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Introduction.html#robot-n2-pou">3.1.4. Robot n°2 POU</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Introduction.html#id1">3.1.4.1. Objectifs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Introduction.html#id2">3.1.4.2. Architecture</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Robot-2023/Tree-ArchiRobot1.html">3.2. Architecture Robot 1 PI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/ArchiRobot1.html">3.2.1. Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot1.html#objectifs">3.2.1.1. Objectifs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot1.html#architecture">3.2.1.2. Architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/ArchiRobot1.html#strategie-cdfr">3.2.2. Strategie CdFR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/ArchiRobot1.html#deplacement">3.2.3. Deplacement</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot1.html#roue">3.2.3.1. Roue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot1.html#motorisation">3.2.3.2. Motorisation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/ArchiRobot1.html#actionneurs">3.2.4. Actionneurs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot1.html#elevateur">3.2.4.1. Elevateur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot1.html#prehenseur-des-piles">3.2.4.2. Prehenseur des piles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot1.html#depose-des-cerises">3.2.4.3. Depose des cerises</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/ArchiRobot1.html#cartes">3.2.5. Cartes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot1.html#raspberry-pi-4">3.2.5.1. Raspberry pi 4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot1.html#arduino-mega-et-ramps1-6">3.2.5.2. Arduino Mega et ramps1.6</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot1.html#arduino-uno">3.2.5.3. Arduino Uno</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Robot-2023/Tree-ArchiRobot2.html">3.3. Architecture Robot 2 POU</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/ArchiRobot2.html">3.3.1. Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Robot-2023/Tree-Configuration_Ubuntu.html">3.4. Configuration_Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Configuration_Ubuntu.html">3.4.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Configuration_Ubuntu.html#mises-a-jour">3.4.2. Mises a jour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Configuration_Ubuntu.html#hotspot-wifi-et-ip-fixes">3.4.3. Hotspot WIFI et IP fixes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Configuration_Ubuntu.html#commandes-utiles">3.4.3.1. Commandes utiles</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Configuration_Ubuntu.html#ssh">3.4.4. SSH</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Configuration_Ubuntu.html#wlan0">3.4.4.1. wlan0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Configuration_Ubuntu.html#eth0">3.4.4.2. eth0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Configuration_Ubuntu.html#depanage">3.4.4.3. depanage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Configuration_Ubuntu.html#fixer-nom-des-ports-usb">3.4.5. Fixer nom des ports USB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Configuration_Ubuntu.html#ros2-au-demarrage">3.4.6. ROS2 au demarrage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Robot-2023/Tree-Motorisation.html">3.5. Motorisation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Motorisation.html">3.5.1. Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Motorisation.html#principe-de-fonctionnement-des-nema">3.5.1.1. Principe de fonctionnement des nema</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Motorisation.html#pilotage-des-moteurs">3.5.2. Pilotage des moteurs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Motorisation.html#les-interuptions">3.5.3. Les interuptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Motorisation.html#confli-servo-h">3.5.3.1. !!!!!! confli servo.h !!!!!!!</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Robot-2023/Tree-Alimentation.html">3.6. Alimentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Alimentation.html">3.6.1. Source d’alimentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Alimentation.html#carte-d-alimentation">3.6.2. Carte d’alimentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Alimentation.html#conversion">3.6.2.1. Conversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Alimentation.html#protection">3.6.2.2. Protection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Alimentation.html#mesure-de-tension">3.6.2.3. Mesure de Tension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Alimentation.html#mesure-du-courant">3.6.2.4. Mesure du Courant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Alimentation.html#le-shema-electrique">3.6.2.5. Le shema electrique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/Alimentation.html#le-pcb">3.6.2.6. Le PCB</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Robot-2023/Tree-Lidar.html">3.7. Lidar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Lidar.html">3.7.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Lidar.html#cablage">3.7.2. Cablage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Lidar.html#installation">3.7.3. Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Lidar.html#lancement-du-lidar">3.7.4. Lancement du lidar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/Lidar.html#visualisation-du-lidar">3.7.5. Visualisation du lidar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Robot-2024/Tree.html">4. Robots Coupe de France de Robotique 2024</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Robot-2024/Tree-Introduction.html">4.1. Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2024/Introduction.html">4.1.1. Sujet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2024/Introduction.html#choix">4.1.2. Choix</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Introduction.html#generalites">4.1.2.1. Généralités</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Introduction.html#prehenseurs">4.1.2.2. Prehenseurs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Introduction.html#alimentation">4.1.2.3. Alimentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Introduction.html#motorisation">4.1.2.4. Motorisation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Introduction.html#detection-d-obstacle">4.1.2.5. Detection d’obstacle</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2024/Introduction.html#robot-principal">4.1.3. Robot Principal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Introduction.html#objectifs">4.1.3.1. Objectifs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Introduction.html#architecture">4.1.3.2. Architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2024/Introduction.html#pami-petit-actionneur-mobile-independant">4.1.4. PAMI (Petit actionneur mobile independant)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Introduction.html#id1">4.1.4.1. Objectifs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Introduction.html#id2">4.1.4.2. Architecture</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Robot-2024/Tree-ArchiRobot.html">4.2. Architecture Robot Principal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2024/ArchiRobot.html">4.2.1. Architecture Robot Principal</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Robot-2024/Tree-ArchiPAMI.html">4.3. Architecture PAMIs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2024/ArchiPAMI.html">4.3.1. Architecture PAMIs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Robot-2024/Tree-Alimentation.html">4.4. Alimentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2024/Alimentation.html">4.4.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2024/Alimentation.html#source-d-alimentation">4.4.2. Source d’alimentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2024/Alimentation.html#carte-d-alimentation">4.4.3. Carte d’alimentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Alimentation.html#conversion">4.4.3.1. Conversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Alimentation.html#protection">4.4.3.2. Protection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Alimentation.html#niveau-de-la-batterie">4.4.3.3. Niveau de la batterie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Alimentation.html#mesure-du-courant">4.4.3.4. Mesure du Courant</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2024/Alimentation.html#realisations">4.4.4. Réalisations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Alimentation.html#le-shema-electrique">4.4.4.1. Le shema electrique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Alimentation.html#le-pcb">4.4.4.2. Le PCB</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Robot-2024/Tree-Lidar.html">4.5. Amelioration du LIDAR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2024/Lidar.html">4.5.1. Introduction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Voron-0.1/Tree.html">5. Imprimante 3D Voron 0.1</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../CAO/Tree.html">6. CAO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../CAO/Tree-Solidworks.html">6.1. Solidworks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../CAO/Solidworks.html">6.1.1. Solidworks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../CAO/Solidworks.html#ajout-pour-le-crubs">6.1.2. Ajout pour le CRUBS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/Solidworks.html#volet-d-infos">6.1.2.1. Volet d’infos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/Solidworks.html#bibliotheques">6.1.2.2. Bibliotheques</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/Solidworks.html#macros">6.1.2.3. Macros</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/Solidworks.html#feuille-de-plans">6.1.2.4. Feuille de plans</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/Solidworks.html#materiaux">6.1.2.5. Materiaux</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../CAO/Tree-KiCad.html">6.2. KiCad</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../CAO/KiCad.html">6.2.1. KiCad</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#le-circuit">6.2.1.1. Le circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#nouveau-projet-kicad">6.2.1.2. Nouveau projet kicad</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../CAO/KiCad.html#editeur-de-schematique">6.2.2. Editeur de Schematique</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#etape-1-premier-composant">6.2.2.1. Etape 1 - premier composant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#etape-2-editeur-de-symbole">6.2.2.2. Etape 2 - Editeur de symbole</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#etape-3-finalisation-schemat">6.2.2.3. Etape 3 - finalisation schemat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#etape-4-editeur-d-empreinte">6.2.2.4. Etape 4 - Editeur d’empreinte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#etape-5-passage-dans-l-editeur-de-kicad">6.2.2.5. Etape 5 - Passage dans l’editeur de Kicad</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../CAO/KiCad.html#editeur-de-pcb-kicad">6.2.3. Editeur de PCB KiCad</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#etape-6-importer-les-empreinte">6.2.3.1. Etape 6 - Importer les empreinte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#etape-7-bordure">6.2.3.2. Etape 7 - Bordure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#etape-8-le-plan-de-masse">6.2.3.3. Etape 8 - Le plan de masse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#etape-9-tracer-les-piste">6.2.3.4. Etape 9 - Tracer les piste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#etape-10-via">6.2.3.5. Etape 10 - Via</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#etape-11-verification">6.2.3.6. Etape 11 - Verification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#etape-12-encrage">6.2.3.7. Etape 12 - Encrage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#etape-13-visualisation">6.2.3.8. Etape 13 - Visualisation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../CAO/KiCad.html#fabrication-du-pcb">6.2.4. Fabrication du PCB</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#etape-14-exporter-les-fichier-de-fabrication">6.2.4.1. Etape 14 - Exporter les fichier de fabrication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#jlcpcb">6.2.4.2. JLCPCB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#cif-ecole">6.2.4.3. CIF (ecole)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../CAO/KiCad.html#aide">6.2.5. Aide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#raccourcis-clavier">6.2.5.1. Raccourcis clavier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#composant">6.2.5.2. Composant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CAO/KiCad.html#taille-de-piste-predefinis">6.2.5.3. Taille de piste prédéfinis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../FAO/Tree.html">7. FAO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../FAO/Tree-PrusaSlicer.html">7.1. PrusaSlicer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../FAO/PrusaSlicer.html">7.1.1. PrusaSlicer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../FAO/Tree-CharlyRobot.html">7.2. CharlyRobot</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../FAO/CharlyRobot.html">7.2.1. Charly Robot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../FAO/Tree-CIF.html">7.3. CIF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../FAO/CIF.html">7.3.1. CIF</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Banc-de-test/Tree.html">8. Banc de test portatif</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Banc-de-test/Tree-Introduction.html">8.1. Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Banc-de-test/Introduction.html">8.1.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Banc-de-test/Introduction.html#enjeux">8.1.2. Enjeux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Banc-de-test/Introduction.html#ojectifs">8.1.3. Ojectifs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Banc-de-test/Introduction.html#objectifs-techniques">8.1.3.1. Objectifs Techniques</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Banc-de-test/Introduction.html#objectifs-temporels">8.1.3.2. Objectifs temporels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Banc-de-test/Introduction.html#objectifs-de-cout">8.1.3.3. Objectifs de coût</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Banc-de-test/Introduction.html#ressources">8.1.4. Ressources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Banc-de-test/Introduction.html#equipement-et-materiel">8.1.4.1. Equipement et matériel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Banc-de-test/Introduction.html#budget">8.1.4.2. Budget</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Banc-de-test/Tree-Boite.html">8.2. Boite</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Banc-de-test/Boite.html">8.2.1. Boite</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Banc-de-test/Tree-Configuration_Raspi.html">8.3. Configuration Raspi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Banc-de-test/Configuration_Raspi.html">8.3.1. Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Banc-de-test/Configuration_Raspi.html#mise-a-jour">8.3.1.1. Mise a jour</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Banc-de-test/Configuration_Raspi.html#ecran-tactile">8.3.1.2. Ecran tactile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Banc-de-test/Configuration_Raspi.html#addresse-ip-statique">8.3.1.3. Addresse IP statique</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Banc-de-test/Configuration_Raspi.html#hotspot-wifi">8.3.2. Hotspot WIFI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Banc-de-test/Configuration_Raspi.html#prerequis">8.3.2.1. Prerequis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Banc-de-test/Configuration_Raspi.html#addresse-ip-fixe-en-wifi">8.3.2.2. Addresse IP fixe en wifi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Banc-de-test/Configuration_Raspi.html#configuration-du-server-dhcp">8.3.2.3. Configuration du server DHCP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Banc-de-test/Configuration_Raspi.html#parametrage-du-reseau-wifi">8.3.2.4. Parametrage du reseau wifi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Banc-de-test/Configuration_Raspi.html#test">8.3.2.5. Test</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Banc-de-test/Tree-Liaison_Serie.html">8.4. Liaison Serie</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Banc-de-test/Liaison_Serie.html">8.4.1. liaison serie</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Banc-de-test/Tree-Capteurs.html">8.5. Capteurs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Banc-de-test/Capteurs.html">8.5.1. Capteurs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Banc-de-test/Tree-Manuel.html">8.6. Manuel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Banc-de-test/Manuel.html">8.6.1. manuel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Doc Outil Crubs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="Tree.html"><span class="section-number">2. </span>Programmation</a></li>
+          <li class="breadcrumb-item"><a href="Tree-ROS2.html"><span class="section-number">2.2. </span>ROS2</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2.2.1. </span>Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Programmation/ROS2.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<h1><span class="section-number">2.2.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers cette rubrique"></a></h1>
+<p>ROS 2, ou Robot Operating System 2, est une plateforme open-source conçue pour faciliter le développement de logiciels pour les robots. Il s’agit d’une évolution de ROS, offrant une architecture plus modulaire et des améliorations de performance par rapport à son prédécesseur. ROS 2 a été conçu pour être plus adaptable à un large éventail de matériel et de systèmes d’exploitation, ce qui en fait une solution polyvalente pour la robotique. Il offre des outils et des bibliothèques pour la gestion des communications, la gestion des périphériques, la planification de trajectoires, et bien plus encore, facilitant ainsi le développement de robots et de systèmes robotiques complexes.</p>
+<p>La distribution ros2 que nous utilisons est « Humble », dont voici la doc : <a class="reference external" href="https://docs.ros.org/en/humble/Tutorials.html">https://docs.ros.org/en/humble/Tutorials.html</a></p>
+</section>
+<section id="installation-et-setup">
+<h1><span class="section-number">2.2.2. </span>Installation et Setup<a class="headerlink" href="#installation-et-setup" title="Lien permanent vers cette rubrique"></a></h1>
+<p>Impératif : ROS2 doit être installer sur une version de l’OS Ubuntu 22.0x, une version inférieure telle qu’un Ubuntu 20.0x ne pourra installer ROS2.</p>
+<p>Si vous avez déjà une version de ros ou de ros2 installer sur votre pc nous recommandons de les retirer pour ne pas rencontrer de problème par la suite.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>purge<span class="w"> </span>ros-*
+sudo<span class="w"> </span>apt-get<span class="w"> </span>autoremove
+</pre></div>
+</div>
+<p>Attention il est possible que cette démarche d’installation ne fonctionne plus, à ce moment veuillez vous referez à la documentation de ros2 et mettez à jour cette documentation : <a class="reference external" href="https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html">https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html</a></p>
+<p>Commençons par mettre à jour la Pi.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+sudo<span class="w"> </span>apt-get<span class="w"> </span>upgrade
+</pre></div>
+</div>
+<p>Vérifions la configuration en utf-8.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>locale<span class="w">  </span><span class="c1"># check for UTF-8</span>
+
+sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>locales
+sudo<span class="w"> </span>locale-gen<span class="w"> </span>en_US<span class="w"> </span>en_US.UTF-8
+sudo<span class="w"> </span>update-locale<span class="w"> </span><span class="nv">LC_ALL</span><span class="o">=</span>en_US.UTF-8<span class="w"> </span><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+<span class="nb">export</span><span class="w"> </span><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+
+locale<span class="w">  </span><span class="c1"># verify settings</span>
+</pre></div>
+</div>
+<p>Téléchargement des dépôts ROS2.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>software-properties-common
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>universe
+
+sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>curl<span class="w"> </span>-y
+sudo<span class="w"> </span>curl<span class="w"> </span>-sSL<span class="w"> </span>https://raw.githubusercontent.com/ros/rosdistro/master/ros.key<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/ros-archive-keyring.gpg
+
+
+<span class="c1"># Ajout du repo a la liste des paquets</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu </span><span class="k">$(</span>.<span class="w"> </span>/etc/os-release<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$UBUNTU_CODENAME</span><span class="k">)</span><span class="s2"> main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/ros2.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</pre></div>
+</div>
+<p>Installations de ros2 et de ces composantes de navigation, cela peut prendre un bon moment.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-humble-desktop
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-humble-ros-base
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-dev-tools
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;source /opt/ros/humble/setup.bash&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.bashrc
+
+<span class="nb">source</span><span class="w"> </span>.bashrc
+
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-humble-navigation2<span class="w"> </span>ros-humble-nav2-bringup<span class="w"> </span>ros-humble-turtlebot3*
+</pre></div>
+</div>
+<p>Installation et sourçage des variables d’environnement de service dds pour la communication à distance. Cela peut être très long. Une fenêtre vous demandant d’accepter la licence RTI s’ouvrira pendant l’installation, vous devez accepter.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-q<span class="w"> </span>-y<span class="w"> </span>rti-connext-dds-6.0.1
+
+<span class="nb">cd</span><span class="w"> </span>/opt/rti.com/rti_connext_dds-6.0.1/resource/scripts<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>./rtisetenv_x64Linux4gcc7.3.0.bash<span class="p">;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>-
+</pre></div>
+</div>
+<p>Installation de colcon pour build les packages.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-colcon-common-extensions
+</pre></div>
+</div>
+<p>Lancement de la demo pour vérifier la bonne installation de ros2.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>demo_nodes_cpp<span class="w"> </span>talker
+</pre></div>
+</div>
+<p>Enfin, on peut supprimer les paquets téléchargés déjà installer puis reboot.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>autoremove
+sudo<span class="w"> </span>reboot
+</pre></div>
+</div>
+</section>
+<section id="bien-commencer">
+<h1><span class="section-number">2.2.3. </span>Bien commencer<a class="headerlink" href="#bien-commencer" title="Lien permanent vers cette rubrique"></a></h1>
+<section id="creation-d-un-workspace">
+<h2><span class="section-number">2.2.3.1. </span>Creation d’un workspace<a class="headerlink" href="#creation-d-un-workspace" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Un workspace, littéralement « espace de travail », est un dossier qui contient vos fichiers source (les packages), les install, les logs et les fichiers sources compilés.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2_ws/src
+</pre></div>
+</div>
+<p>Vous créer ici le workspace de nom « ros2_ws » (vous pouvez l’appeler comme vous le souhaitez.) et par la même ocasion le dossier src qui contiendra les packages.</p>
+</section>
+<section id="creation-d-un-package">
+<h2><span class="section-number">2.2.3.2. </span>Création d’un package<a class="headerlink" href="#creation-d-un-package" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Afin de séparer les différentes parties d’un projet, il est recommandé de créer plusieurs package dans le dossier src de votre espace de travail.</p>
+<p>On commence par se rendre dans le dossier source de notre workspace précédemment créer.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src
+</pre></div>
+</div>
+<p>Puis on créer le package.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>pkg<span class="w"> </span>create<span class="w"> </span>--build-type<span class="w"> </span>ament_python<span class="w"> </span>my_package
+</pre></div>
+</div>
+</section>
+<section id="programmes-type">
+<h2><span class="section-number">2.2.3.3. </span>Programmes type<a class="headerlink" href="#programmes-type" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Voici un premier nœud type dans lequel on retrouve tout ce qui est nécessaire pour commencer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span> <span class="c1">#lib ro2</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span> <span class="c1">#import de la classe Node</span>
+<span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span> <span class="c1">#import du type de message de topic String, cette ligne doit etre adapté</span>
+
+<span class="c1">#création de notre neoud, ce dernier est un objet herité de la classe Node de la librairie</span>
+<span class="k">class</span> <span class="nc">MyNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;my_node&#39;</span><span class="p">)</span> <span class="c1">#nom du noeud en parametre</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">publisher_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;my_topic&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">#creation d&#39;un publisher (type de message, nom du topic, timeout)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;my_topic&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">#creation d&#39;un subscriber (type de message, nom du topic, fonction a appeler, timeout)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer_callback</span><span class="p">)</span> <span class="c1">#creation d&#39;un timer (periode, fonction a appeler)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Node initialized&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="c1">#cette fonction est appeler a chaque fois qu&#39;un message est lu</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Received message: &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="c1">#renvoie du message lu</span>
+
+    <span class="k">def</span> <span class="nf">timer_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># cette fonction est appeler a une certaine frequence definis</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">String</span><span class="p">()</span> <span class="c1">#creation de l&#39;objet msg</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;Hello, ROS 2!&#39;</span> <span class="c1">#on remplis le message</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">publisher_</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="c1">#on publie sur le publisher</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Published message: &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1">#en dessous les lignes suivante sont obligatoire et toujours en fin de programme</span>
+<span class="c1">#creation de la fonction main</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">MyNode</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="build-d-un-workspace-avec-colcon">
+<h2><span class="section-number">2.2.3.4. </span>Build d’un workspace avec colcon<a class="headerlink" href="#build-d-un-workspace-avec-colcon" title="Lien permanent vers cette rubrique"></a></h2>
+<p>À chaque fois qu’un fichier est modifié, il est nécessaire de compiler de nouveau votre espace de travail. Pour cela, placer vous dans le vôtre workspace puis entrer la commande suivante</p>
+<p>Commencer par vous placer dans votre workspace :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws
+</pre></div>
+</div>
+<p>Puis vous pouvez compiler.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon<span class="w"> </span>build
+</pre></div>
+</div>
+<p>Vous pouvez aussi build un package en particulier pour gagner du temps</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon<span class="w"> </span>build<span class="w"> </span>--packages-select<span class="w"> </span>my_package
+</pre></div>
+</div>
+<p>Une fois le build terminer il est nécessaire de sourcer de nouveau votre travail. La compilation à créer le fichier sh nécessaire à l’installation.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>install/setup.sh
+</pre></div>
+</div>
+<section id="alias">
+<h3><span class="section-number">2.2.3.4.1. </span>alias<a class="headerlink" href="#alias" title="Lien permanent vers cette rubrique"></a></h3>
+<p>Pour simplifier la compilation, je recommande de créer un alias pour ne pas à avoir a lancer les deux ligne précédente, pour cela, nous allons éditer le fichier bashrc qui gère votre terminal.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>nano<span class="w"> </span>~/.bashrc
+</pre></div>
+</div>
+<p>Et y rajouter la ligne suivante à la fin :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span><span class="w"> </span><span class="nv">rb</span><span class="o">=</span><span class="s1">&#39;colcon build &amp;&amp; source install/setup.sh&#39;</span>
+</pre></div>
+</div>
+<p>Maintenant en entrant la commande “rb” dans votre terminal, la compilation puis le sourçage s’effectuera.</p>
+</section>
+</section>
+</section>
+<section id="commandes-importantes">
+<h1><span class="section-number">2.2.4. </span>Commandes importantes<a class="headerlink" href="#commandes-importantes" title="Lien permanent vers cette rubrique"></a></h1>
+<section id="les-executable">
+<h2><span class="section-number">2.2.4.1. </span>Les executable<a class="headerlink" href="#les-executable" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Un exécutable lance un nœud.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>nom_paquet<span class="w"> </span>nom_executable
+</pre></div>
+</div>
+</section>
+<section id="les-launchs">
+<h2><span class="section-number">2.2.4.2. </span>Les launchs<a class="headerlink" href="#les-launchs" title="Lien permanent vers cette rubrique"></a></h2>
+<p>un launch lance plusieurs executable.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>nom_paquet<span class="w"> </span>nom_launch
+</pre></div>
+</div>
+</section>
+<section id="les-topics">
+<h2><span class="section-number">2.2.4.3. </span>les topics<a class="headerlink" href="#les-topics" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Lister les topics :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>list
+</pre></div>
+</div>
+<p>Ecouter un topic</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/nom_du_topic
+</pre></div>
+</div>
+<p>Info sur le topic</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>info<span class="w"> </span>/nom_du_topic
+</pre></div>
+</div>
+</section>
+<section id="les-noeuds">
+<h2><span class="section-number">2.2.4.4. </span>les noeuds<a class="headerlink" href="#les-noeuds" title="Lien permanent vers cette rubrique"></a></h2>
+<p>lister les noeud :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>node<span class="w"> </span>list
+</pre></div>
+</div>
+</section>
+<section id="rqt-graph">
+<h2><span class="section-number">2.2.4.5. </span>rqt graph<a class="headerlink" href="#rqt-graph" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Permet de visualiser les liens entre les nœuds et les topics sous forme visuelle.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>rqt_graph<span class="w"> </span>rqt_graph
+</pre></div>
+</div>
+</section>
+<section id="rviz">
+<h2><span class="section-number">2.2.4.6. </span>rviz<a class="headerlink" href="#rviz" title="Lien permanent vers cette rubrique"></a></h2>
+<p>rviz permet de visualiser l’environnement détecté par le robot. Par exemple visualiser les données du lidar</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rviz2
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Tree-ROS2.html" class="btn btn-neutral float-left" title="2.2. ROS2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Tree-Arduino.html" class="btn btn-neutral float-right" title="2.3. Arduino" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, CRUBS.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
